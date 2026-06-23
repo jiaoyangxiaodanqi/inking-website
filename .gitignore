@@ -1,0 +1,10 @@
+node_modules
+.next
+out
+.env*.local
+.DS_Store
+*.log
+
+# 本地开发用的便携 Node 运行时，不需要上传到 Git
+.node/
+dev.log
