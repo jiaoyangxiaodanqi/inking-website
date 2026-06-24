@@ -45,9 +45,9 @@ export const works: Work[] = [
     category: "ad",
     year: 2025,
     cover:
-      "public/work-dp-x16-9.png",
+      "/public/work-dp-x16-9.png",
     description:
-      "按西游记原著，结合现在的ai技术，重新呈现故事。",
+      "按西游记原著，运用ai技术，重新呈现故事。",
     platform: "bilibili",
     videoId: "BV1G3jQ6yErt",
     bvid: "BV1G3jQ6yErt",
