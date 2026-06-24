@@ -40,17 +40,17 @@ export const works: Work[] = [
   },
   {
     id: "demo-ad-01",
-    title: "城市商业综合体 TVC",
-    client: "示例客户 B",
+    title: "西游记片段",
+    client: "短剧 A",
     category: "ad",
     year: 2025,
     cover:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1600&q=80&auto=format&fit=crop",
     description:
-      "以人物视角串联空间叙事，结合现场实拍与三维合成，呈现商业体的日夜呼吸感。",
+      "按西游记原著，结合现在的ai技术，重新呈现故事。",
     platform: "bilibili",
-    videoId: "BV1GJ411x7h7",
-    bvid: "BV1GJ411x7h7",
+    videoId: "BV1G3jQ6yErt",
+    bvid: "BV1G3jQ6yErt",
     featured: true,
   },
   {
