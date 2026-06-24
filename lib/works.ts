@@ -15,10 +15,10 @@ export type Work = {
 };
 
 export const categoryLabels: Record<Work["category"], string> = {
-  product: "产品宣传片",
-  ad: "广告视频",
+  product: "产品广告片",
+  ad: "视频短片",
   architecture: "建筑动画",
-  animation: "三维动画",
+  animation: "MG动画",
   multimedia: "多媒体",
 };
 
