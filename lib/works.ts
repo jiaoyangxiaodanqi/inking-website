@@ -45,7 +45,7 @@ export const works: Work[] = [
     category: "ad",
     year: 2025,
     cover:
-      "https://images.unsplash.com/photo-1551434678-e076c223a692?w=1600&q=80&auto=format&fit=crop",
+      "public/work-dp-x16-9.png",
     description:
       "按西游记原著，结合现在的ai技术，重新呈现故事。",
     platform: "bilibili",
