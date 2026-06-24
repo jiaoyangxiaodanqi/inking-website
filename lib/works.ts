@@ -1,4 +1,4 @@
-export type VideoPlatform = "bilibili" | "youtube" | "vimeo";
+export type VideoPlatform = "bilibili" | "youtube" | "vimeo" | "mp4";
 
 export type Work = {
   id: string;
@@ -12,6 +12,7 @@ export type Work = {
   videoId: string;
   featured?: boolean;
   bvid?: string;
+  videoUrl?: string;
 };
 
 export const categoryLabels: Record<Work["category"], string> = {
@@ -48,9 +49,10 @@ export const works: Work[] = [
       "/work-dp-x16-9.png",
     description:
       "按西游记原著，运用ai技术，重新呈现故事。",
-    platform: "bilibili",
-    videoId: "BV1G3jQ6yErt",
-    bvid: "BV1G3jQ6yErt",
+    platform: "mp4",
+    videoId: "xiyouji-001",
+    videoUrl:
+      "https://1446610069.vod-qcloud.com/8510cce7vodcq1446610069/e9c2e4095001834808653842874/Pa7M2kjfLooA.mov",
     featured: true,
   },
   {
@@ -120,5 +122,7 @@ export function getEmbedUrl(work: Work): string {
       return `https://www.youtube.com/embed/${work.videoId}?autoplay=1&rel=0`;
     case "vimeo":
       return `https://player.vimeo.com/video/${work.videoId}?autoplay=1`;
+    case "mp4":
+      return work.videoUrl ?? work.videoId;
   }
 }

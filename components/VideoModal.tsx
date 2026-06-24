@@ -44,12 +44,25 @@ export default function VideoModal({
         onClick={(e) => e.stopPropagation()}
       >
         <div className="aspect-video bg-black border border-ink-800">
-          <iframe
-            src={getEmbedUrl(work)}
-            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-            allowFullScreen
-            className="w-full h-full"
-          />
+          {work.platform === "mp4" ? (
+            <video
+              src={getEmbedUrl(work)}
+              controls
+              autoPlay
+              playsInline
+              controlsList="nodownload noplaybackrate noremoteplayback"
+              disablePictureInPicture
+              onContextMenu={(e) => e.preventDefault()}
+              className="w-full h-full bg-black"
+            />
+          ) : (
+            <iframe
+              src={getEmbedUrl(work)}
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+              className="w-full h-full"
+            />
+          )}
         </div>
         <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div>
