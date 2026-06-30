@@ -26,14 +26,28 @@ export default function VideoCard({
             size === "large" ? "aspect-[16/9]" : "aspect-video"
           }`}
         >
-          <Image
-            src={work.cover}
-            alt={work.title}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
-            className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent opacity-90" />
+          {work.cover ? (
+            <>
+              <Image
+                src={work.cover}
+                alt={work.title}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-ink-950/30 to-transparent opacity-90" />
+            </>
+          ) : (
+            <div className="absolute inset-0 bg-gradient-to-br from-ink-800 via-ink-900 to-ink-950 transition-transform duration-[1200ms] ease-out group-hover:scale-105">
+              <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,162,60,0.18),transparent_55%)]" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="font-serif text-5xl md:text-6xl text-white/15 select-none">
+                  {work.title.slice(0, 4)}
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent" />
+            </div>
+          )}
 
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <span className="w-16 h-16 rounded-full border border-white/70 flex items-center justify-center backdrop-blur-sm bg-black/20">

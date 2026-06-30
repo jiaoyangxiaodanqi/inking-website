@@ -6,7 +6,7 @@ export type Work = {
   client?: string;
   category: "product" | "ad" | "architecture" | "animation" | "multimedia";
   year: number;
-  cover: string;
+  cover?: string;
   description: string;
   platform: VideoPlatform;
   videoId: string;
@@ -25,30 +25,26 @@ export const categoryLabels: Record<Work["category"], string> = {
 
 export const works: Work[] = [
   {
-    id: "demo-product-01",
-    title: "智能家电品牌发布短片",
-    client: "示例客户 A",
+    id: "product-dianjieshui",
+    title: "电解质水",
+    client: "农夫山泉",
     category: "product",
-    year: 2025,
-    cover:
-      "https://images.unsplash.com/photo-1558002038-1055907df827?w=1600&q=80&auto=format&fit=crop",
-    description:
-      "围绕产品工业设计语言，以极简光影与微距镜头呈现细节质感，6 秒锁定记忆点。",
-    platform: "bilibili",
-    videoId: "BV1GJ411x7h7",
-    bvid: "BV1GJ411x7h7",
+    year: 2026,
+    description: "农夫山泉电解质水广告视频。",
+    platform: "mp4",
+    videoId: "dianjieshui-001",
+    videoUrl:
+      "https://1446610069.vod-qcloud.com/8510cce7vodcq1446610069/9551bd615001834808686820414/XSSCAHBur2QA.mov",
     featured: true,
   },
   {
-    id: "demo-ad-01",
+    id: "ad-xiyouji",
     title: "西游记片段",
     client: "短剧 A",
     category: "ad",
     year: 2025,
-    cover:
-      "/work-dp-x16-9.png",
-    description:
-      "按西游记原著，运用ai技术，重新呈现故事。",
+    cover: "/work-dp-x16-9.png",
+    description: "按西游记原著，运用 AI 技术，重新呈现故事。",
     platform: "mp4",
     videoId: "xiyouji-001",
     videoUrl:
@@ -56,61 +52,28 @@ export const works: Work[] = [
     featured: true,
   },
   {
-    id: "demo-arch-01",
-    title: "高端住宅项目建筑动画",
-    client: "示例客户 C",
-    category: "architecture",
-    year: 2024,
-    cover:
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80&auto=format&fit=crop",
-    description:
-      "从城市鸟瞰一路下沉至庭院入户，运用电影级运镜与材质表现项目调性。",
-    platform: "bilibili",
-    videoId: "BV1GJ411x7h7",
-    bvid: "BV1GJ411x7h7",
-    featured: true,
-  },
-  {
-    id: "demo-anim-01",
-    title: "品牌 IP 三维动画短片",
-    client: "示例客户 D",
-    category: "animation",
-    year: 2024,
-    cover:
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=1600&q=80&auto=format&fit=crop",
-    description:
-      "原创角色与世界观设计，结合手绘风格贴图与剧情节奏，强化品牌人格化记忆。",
-    platform: "bilibili",
-    videoId: "BV1GJ411x7h7",
-    bvid: "BV1GJ411x7h7",
-  },
-  {
-    id: "demo-product-02",
-    title: "新能源汽车产品片",
-    client: "示例客户 E",
+    id: "product-mudanziyou",
+    title: "牡丹籽油",
+    client: "菏泽尧舜牡丹生物科技有限公司",
     category: "product",
-    year: 2024,
-    cover:
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1600&q=80&auto=format&fit=crop",
-    description:
-      "在虚拟工作室中完成全 CG 制作，控制光影与材质细节，省去外景受限的成本。",
-    platform: "bilibili",
-    videoId: "BV1GJ411x7h7",
-    bvid: "BV1GJ411x7h7",
+    year: 2026,
+    description: "牡丹籽油广告视频。",
+    platform: "mp4",
+    videoId: "mudanziyou-001",
+    videoUrl:
+      "https://1446610069.vod-qcloud.com/8510cce7vodcq1446610069/cfcad28a5001834808687047952/U0IPkD2VBLQA.mp4",
   },
   {
-    id: "demo-multi-01",
-    title: "线下展厅多媒体内容",
-    client: "示例客户 F",
-    category: "multimedia",
-    year: 2024,
-    cover:
-      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1600&q=80&auto=format&fit=crop",
-    description:
-      "异形屏幕方案、互动触控、沉浸式投影内容定制，从内容到落地的一体化交付。",
-    platform: "bilibili",
-    videoId: "BV1GJ411x7h7",
-    bvid: "BV1GJ411x7h7",
+    id: "product-shuangfushui",
+    title: "爽肤水",
+    client: "菏泽尧舜牡丹生物科技有限公司",
+    category: "product",
+    year: 2026,
+    description: "爽肤水广告视频。",
+    platform: "mp4",
+    videoId: "shuangfushui-001",
+    videoUrl:
+      "https://1446610069.vod-qcloud.com/8510cce7vodcq1446610069/db6391505001834808687539664/eIWiSXOe2F0A.mp4",
   },
 ];
 
