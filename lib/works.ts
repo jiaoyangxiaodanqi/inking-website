@@ -34,7 +34,7 @@ export const works: Work[] = [
     platform: "mp4",
     videoId: "dianjieshui-001",
     videoUrl:
-      "https://1446610069.vod-qcloud.com/8510cce7vodcq1446610069/9551bd615001834808686820414/XSSCAHBur2QA.mov",
+      "https://1446610069.vod-qcloud.com/5bfaba8fvodtranscq1446610069/9551bd615001834808686820414/adp.10.m3u8",
     featured: true,
   },
   {
@@ -48,7 +48,7 @@ export const works: Work[] = [
     platform: "mp4",
     videoId: "xiyouji-001",
     videoUrl:
-      "https://1446610069.vod-qcloud.com/8510cce7vodcq1446610069/e9c2e4095001834808653842874/Pa7M2kjfLooA.mov",
+      "https://1446610069.vod-qcloud.com/5bfaba8fvodtranscq1446610069/e9c2e4095001834808653842874/adp.10.m3u8",
     featured: true,
   },
   {
@@ -61,7 +61,7 @@ export const works: Work[] = [
     platform: "mp4",
     videoId: "mudanziyou-001",
     videoUrl:
-      "https://1446610069.vod-qcloud.com/8510cce7vodcq1446610069/cfcad28a5001834808687047952/U0IPkD2VBLQA.mp4",
+      "https://1446610069.vod-qcloud.com/5bfaba8fvodtranscq1446610069/cfcad28a5001834808687047952/adp.10.m3u8",
   },
   {
     id: "product-shuangfushui",
@@ -73,7 +73,7 @@ export const works: Work[] = [
     platform: "mp4",
     videoId: "shuangfushui-001",
     videoUrl:
-      "https://1446610069.vod-qcloud.com/8510cce7vodcq1446610069/db6391505001834808687539664/eIWiSXOe2F0A.mp4",
+      "https://1446610069.vod-qcloud.com/5bfaba8fvodtranscq1446610069/db6391505001834808687539664/adp.10.m3u8",
   },
 ];
 

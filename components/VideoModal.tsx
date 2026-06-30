@@ -1,8 +1,68 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import type { Work } from "@/lib/works";
 import { getEmbedUrl, categoryLabels } from "@/lib/works";
+
+function HlsVideo({ src }: { src: string }) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    const isHls = src.includes(".m3u8");
+
+    if (!isHls) {
+      video.src = src;
+      return;
+    }
+
+    if (video.canPlayType("application/vnd.apple.mpegurl")) {
+      video.src = src;
+      return;
+    }
+
+    let hls: import("hls.js").default | null = null;
+    let cancelled = false;
+
+    import("hls.js").then(({ default: Hls }) => {
+      if (cancelled) return;
+      if (!Hls.isSupported()) {
+        video.src = src;
+        return;
+      }
+      hls = new Hls({
+        enableWorker: true,
+        lowLatencyMode: false,
+        maxBufferLength: 30,
+      });
+      hls.loadSource(src);
+      hls.attachMedia(video);
+    });
+
+    return () => {
+      cancelled = true;
+      if (hls) {
+        hls.destroy();
+        hls = null;
+      }
+    };
+  }, [src]);
+
+  return (
+    <video
+      ref={videoRef}
+      controls
+      autoPlay
+      playsInline
+      controlsList="nodownload noplaybackrate noremoteplayback"
+      disablePictureInPicture
+      onContextMenu={(e) => e.preventDefault()}
+      className="w-full h-full bg-black"
+    />
+  );
+}
 
 export default function VideoModal({
   work,
@@ -45,16 +105,7 @@ export default function VideoModal({
       >
         <div className="aspect-video bg-black border border-ink-800">
           {work.platform === "mp4" ? (
-            <video
-              src={getEmbedUrl(work)}
-              controls
-              autoPlay
-              playsInline
-              controlsList="nodownload noplaybackrate noremoteplayback"
-              disablePictureInPicture
-              onContextMenu={(e) => e.preventDefault()}
-              className="w-full h-full bg-black"
-            />
+            <HlsVideo src={getEmbedUrl(work)} />
           ) : (
             <iframe
               src={getEmbedUrl(work)}
