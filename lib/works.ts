@@ -38,6 +38,18 @@ export const works: Work[] = [
     featured: true,
   },
   {
+    id: "ad-1024ci-huxi",
+    title: "第1024次呼吸",
+    client: "砚宸科技",
+    category: "ad",
+    year: 2026,
+    description: "AI 视频短片。",
+    platform: "mp4",
+    videoId: "ad-1024ci-huxi",
+    videoUrl:
+      "https://1446610069.vod-qcloud.com/5bfaba8fvodtranscq1446610069/8549d5c55001834808686167342/adp.10.m3u8",
+  },
+  {
     id: "ad-xiyouji",
     title: "西游记片段",
     client: "短剧 A",
