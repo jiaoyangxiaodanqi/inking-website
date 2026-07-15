@@ -19,7 +19,7 @@ export const categoryLabels: Record<Work["category"], string> = {
   product: "产品广告片",
   ad: "视频短片",
   architecture: "建筑动画",
-  animation: "MG动画",
+  animation: "效果图",
   multimedia: "多媒体",
 };
 
@@ -74,6 +74,28 @@ export const works: Work[] = [
     videoId: "shuangfushui-001",
     videoUrl:
       "https://1446610069.vod-qcloud.com/5bfaba8fvodtranscq1446610069/db6391505001834808687539664/adp.10.m3u8",
+  },
+  {
+    id: "architecture-001",
+    title: "建筑动画作品",
+    category: "architecture",
+    year: 2026,
+    description: "建筑漫游动画作品。",
+    platform: "mp4",
+    videoId: "architecture-001",
+    videoUrl:
+      "https://1446610069.vod-qcloud.com/5bfaba8fvodtranscq1446610069/22cd69315001834810520324176/adp.10.m3u8",
+  },
+  {
+    id: "multimedia-001",
+    title: "多媒体作品",
+    category: "multimedia",
+    year: 2026,
+    description: "多媒体展示内容。",
+    platform: "mp4",
+    videoId: "multimedia-001",
+    videoUrl:
+      "https://1446610069.vod-qcloud.com/5bfaba8fvodtranscq1446610069/410680f25001834811921112365/adp.10.m3u8",
   },
 ];
 

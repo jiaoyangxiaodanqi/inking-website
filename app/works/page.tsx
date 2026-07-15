@@ -9,8 +9,8 @@ const filters: { key: "all" | Work["category"]; label: string }[] = [
   { key: "product", label: categoryLabels.product },
   { key: "ad", label: categoryLabels.ad },
   { key: "architecture", label: categoryLabels.architecture },
-  { key: "animation", label: categoryLabels.animation },
   { key: "multimedia", label: categoryLabels.multimedia },
+  { key: "animation", label: categoryLabels.animation },
 ];
 
 export default function WorksPage() {
