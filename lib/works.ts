@@ -71,7 +71,7 @@ export const works: Work[] = [
     client: "菏泽尧舜牡丹生物科技有限公司",
     category: "product",
     year: 2026,
-    cover: "/cover-mudanziyou.png",
+    cover: "/cover-mudanziyou.jpg",
     description: "牡丹籽油广告视频。",
     platform: "mp4",
     videoId: "mudanziyou-001",
