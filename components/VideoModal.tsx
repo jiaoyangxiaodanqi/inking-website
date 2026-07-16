@@ -103,18 +103,31 @@ export default function VideoModal({
         className="relative w-full max-w-6xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="aspect-video bg-black border border-ink-800">
-          {work.platform === "mp4" ? (
-            <HlsVideo src={getEmbedUrl(work)} />
-          ) : (
-            <iframe
+        {work.platform === "image" ? (
+          <div className="flex items-center justify-center max-h-[85vh]">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
               src={getEmbedUrl(work)}
-              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-              allowFullScreen
-              className="w-full h-full"
+              alt={work.title}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable={false}
+              className="max-h-[85vh] max-w-full object-contain border border-ink-800 bg-ink-950"
             />
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="aspect-video bg-black border border-ink-800">
+            {work.platform === "mp4" ? (
+              <HlsVideo src={getEmbedUrl(work)} />
+            ) : (
+              <iframe
+                src={getEmbedUrl(work)}
+                allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            )}
+          </div>
+        )}
         <div className="mt-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <div>
             <p className="text-xs tracking-[0.3em] uppercase text-accent">

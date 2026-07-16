@@ -1,13 +1,13 @@
-export type VideoPlatform = "bilibili" | "youtube" | "vimeo" | "mp4";
+export type VideoPlatform = "bilibili" | "youtube" | "vimeo" | "mp4" | "image";
 
 export type Work = {
   id: string;
   title: string;
   client?: string;
   category: "product" | "ad" | "architecture" | "animation" | "multimedia";
-  year: number;
+  year?: number;
   cover?: string;
-  description: string;
+  description?: string;
   platform: VideoPlatform;
   videoId: string;
   featured?: boolean;
@@ -130,5 +130,7 @@ export function getEmbedUrl(work: Work): string {
       return `https://player.vimeo.com/video/${work.videoId}?autoplay=1`;
     case "mp4":
       return work.videoUrl ?? work.videoId;
+    case "image":
+      return work.cover ?? "";
   }
 }

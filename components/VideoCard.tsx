@@ -51,12 +51,26 @@ export default function VideoCard({
 
           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
             <span className="w-16 h-16 rounded-full border border-white/70 flex items-center justify-center backdrop-blur-sm bg-black/20">
-              <svg
-                viewBox="0 0 24 24"
-                className="w-6 h-6 fill-white translate-x-[2px]"
-              >
-                <path d="M8 5v14l11-7z" />
-              </svg>
+              {work.platform === "image" ? (
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="white"
+                  strokeWidth="1.5"
+                  className="w-6 h-6"
+                >
+                  <circle cx="11" cy="11" r="7" />
+                  <path d="m20 20-4-4" strokeLinecap="round" />
+                  <path d="M11 8v6M8 11h6" strokeLinecap="round" />
+                </svg>
+              ) : (
+                <svg
+                  viewBox="0 0 24 24"
+                  className="w-6 h-6 fill-white translate-x-[2px]"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              )}
             </span>
           </div>
 
@@ -74,11 +88,14 @@ export default function VideoCard({
                 {work.title}
               </h3>
               {work.client && (
-                <p className="mt-1 text-xs text-ink-300">{work.client} · {work.year}</p>
+                <p className="mt-1 text-xs text-ink-300">
+                  {work.client}
+                  {work.year && ` · ${work.year}`}
+                </p>
               )}
             </div>
             <span className="text-xs text-accent tracking-[0.2em] uppercase whitespace-nowrap">
-              Play →
+              {work.platform === "image" ? "View →" : "Play →"}
             </span>
           </div>
         </div>
