@@ -54,6 +54,7 @@ export default function Footer() {
           <ul className="space-y-3 text-sm text-ink-200">
             <li>邮箱 · 3676898@qq.com</li>
             <li>电话 · 186 2221 5545</li>
+            <li>微信 · ALton0218</li>
             <li>地址 · 天津市</li>
           </ul>
         </div>

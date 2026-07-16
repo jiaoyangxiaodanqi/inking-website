@@ -42,6 +42,14 @@ export default function ContactPage() {
             </div>
             <div>
               <p className="text-xs tracking-[0.3em] uppercase text-ink-400">
+                微信
+              </p>
+              <p className="mt-1 text-lg text-ink-100 select-all">
+                ALton0218
+              </p>
+            </div>
+            <div>
+              <p className="text-xs tracking-[0.3em] uppercase text-ink-400">
                 地址
               </p>
               <p className="mt-1 text-lg text-ink-100">天津市</p>
@@ -59,11 +67,16 @@ export default function ContactPage() {
 
         <div className="lg:col-span-7">
           <form
-            action="mailto:3676898@qq.com"
-            method="post"
-            encType="text/plain"
+            action="https://formsubmit.co/3676898@qq.com"
+            method="POST"
             className="space-y-6 bg-ink-900/40 border border-ink-800 p-8 md:p-10"
           >
+            <input type="hidden" name="_subject" value="[砚宸科技官网] 新客户询价" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://inking-cg.com/contact?sent=1" />
+            <input type="text" name="_honey" style={{ display: "none" }} />
+
             <div className="grid md:grid-cols-2 gap-6">
               <Field label="姓名 *" name="name" required />
               <Field label="公司 / 机构" name="company" />
@@ -133,7 +146,8 @@ export default function ContactPage() {
             </button>
 
             <p className="text-xs text-ink-400 leading-relaxed">
-              点击发送后会通过你的邮件客户端把内容发到我们邮箱；若不方便，也可以直接发邮件至{" "}
+              提交后我们会在 24 小时内通过邮件或电话回复；也可以直接添加微信{" "}
+              <span className="text-accent select-all">ALton0218</span> 或邮件{" "}
               <Link
                 href="mailto:3676898@qq.com"
                 className="text-accent underline-offset-4 hover:underline"
